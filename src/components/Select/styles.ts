@@ -1,5 +1,27 @@
-import styled from 'styled-components';
+import { StylesConfig } from "react-select";
+import { Option } from "../../types";
 
-const StyledSelect = styled.div``;
-
-export { StyledSelect };
+export const SelectStyles: StylesConfig<Option, false> = {
+  control: (styles) => ({
+    ...styles,
+    lineHeight: "15px",
+    border: "1px solid #EEEEEE",
+    borderRadius: "5px",
+    outline: "none",
+    cursor: "pointer",
+  }),
+  singleValue: (base) => ({
+    ...base,
+    fontSize: "12px",
+    textAlign: "left",
+    color: "#000",
+  }),
+  indicatorSeparator: (base) => ({
+    ...base,
+    backgroundColor: "#EEEEEE",
+  }),
+  option: (base) => ({
+    ...base,
+    fontSize: "12px",
+  }),
+};

@@ -1,6 +1,11 @@
-import React from 'react';
-import { StyledBadge } from './styles';
+import React from "react";
+import { StyledBadge, StyledBadgeInput, StyledBadgeButton } from "./styles";
 
 export const Badge = () => {
-  return <StyledBadge>Badge</StyledBadge>;
+  return (
+    <StyledBadge>
+      <StyledBadgeInput>Budget: $3000</StyledBadgeInput>
+      <StyledBadgeButton>Edit</StyledBadgeButton>
+    </StyledBadge>
+  );
 };
