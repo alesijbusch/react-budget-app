@@ -5,11 +5,11 @@ const StyledRemainingCard = styled.div`
   background: #ccd5ff;
   border-radius: 10px;
 `;
-const StyledRemainingInput = styled.p`
+const StyledRemainingCardInput = styled.p`
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
 `;
 
-export { StyledRemainingCard, StyledRemainingInput };
+export { StyledRemainingCard, StyledRemainingCardInput };
