@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
-const StyledExpenses = styled.div``;
+const ExpensesGroup = styled.div`
+  display: grid;
+  grid-gap: 20px;
+`;
 
-export { StyledExpenses };
+export { ExpensesGroup };

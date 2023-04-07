@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BudgetApp, StyledBadget } from "./styles";
+import { BudgetApp, BudgetGroup, StyledBadget } from "./styles";
 import { BadgetCard } from "../BadgetCard/BadgetCard";
 import { RemainingCard } from "../RemainingCard/RemainingCard";
 import { SpentCard } from "../SpentCard/SpentCard";
@@ -16,7 +16,7 @@ const options: Option[] = [
 export const Badget = () => {
   const [tips, setTips] = useState<Option>(options[0]);
   return (
-    <>
+    <BudgetGroup>
       <BudgetApp>
         <Title name="Budget App" />
         <CustomSelect options={options} setTips={setTips} defaultValue={options[0]} />
@@ -26,6 +26,6 @@ export const Badget = () => {
         <RemainingCard />
         <SpentCard />
       </StyledBadget>
-    </>
+    </BudgetGroup>
   );
 };

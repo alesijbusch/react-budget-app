@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import { BudgetGroup, Container } from "./ui/base";
-import { Title } from "./components/Title/Title";
+import { Container } from "./ui/base";
 
 import { Badget } from "./components/Badget/Badget";
+import { Expenses } from "./components/Expenses/Expenses";
 
 function App() {
   return (
     <Container>
-      <BudgetGroup>
-        <Badget />
-      </BudgetGroup>
+      <Badget />
+      <Expenses />
     </Container>
   );
 }
