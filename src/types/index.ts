@@ -2,4 +2,10 @@ interface Option {
   value: number;
   label: string;
 }
-export type { Option };
+
+interface FormValue {
+  name: string;
+  cost: string;
+}
+
+export type { Option, FormValue };
