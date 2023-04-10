@@ -1,8 +1,6 @@
-import React from "react";
-
-interface getValidateRuleProps {
-  type: string;
-}
+// type getValidateRuleProps = {
+//   type: string;
+// }
 
 export const getValidateRule = (type: string) => {
   if (type === "text") {
@@ -14,7 +12,7 @@ export const getValidateRule = (type: string) => {
       },
       pattern: {
         message: "Enter only letters",
-        value: /^[A-Za-z]+$/i,
+        value: /^[A-Za-zА-Яа-я]+$/i,
       },
     };
   } else if (type === "number") {

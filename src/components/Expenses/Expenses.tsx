@@ -1,8 +1,6 @@
 import React from "react";
 import { ExpensesGroup } from "./styles";
-import { Title } from "../Title/Title";
-import { ExpensesList } from "../ExpensesList/ExpensesList";
-import { Input } from "../Input/Input";
+import { ExpensesList, Title } from "components";
 
 export const Expenses = () => {
   return (

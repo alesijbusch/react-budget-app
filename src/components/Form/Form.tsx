@@ -1,19 +1,21 @@
-import React, { ChangeEvent, useState } from "react";
-import { InputGroup, StyledButton, StyledForm, StyledInput } from "./styles";
+import React, { ChangeEvent } from "react";
+import { InputGroup, StyledButton, StyledForm } from "./styles";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
-import { Title } from "../Title/Title";
-import { v4 as uuidv4 } from "uuid";
-import { getValidateRule } from "../../function/function";
-import { FormValue } from "../../types";
-import { Input } from "../Input/Input";
+// import { v4 as uuidv4 } from "uuid";
+import { FormValue, Input, Title, getValidateRule } from "components";
+import { addExpense } from "function/addExpense";
+
+// interface FormProps {
+//   onSubmit: any;
+// }
 
 export const Form = () => {
-  const addExpense = (data: FormValue) => {
-    return {
-      ...data,
-      id: uuidv4(),
-    };
-  };
+  // const addExpense = (data: FormValue) => {
+  //   return {
+  //     ...data,
+  //     id: uuidv4(),
+  //   };
+  // };
   const {
     handleSubmit,
     control,
@@ -27,7 +29,9 @@ export const Form = () => {
 
   const onSubmit: SubmitHandler<FormValue> = (data) => {
     console.log(addExpense(data));
+    //const obj = addExpense(data);
   };
+
   return (
     <StyledForm onSubmit={handleSubmit(onSubmit)}>
       <Title name="Add Expense" />

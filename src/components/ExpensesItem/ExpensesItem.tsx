@@ -1,7 +1,6 @@
 import React from "react";
 import { StyledExpensesItem, StyledExpensesTitle } from "./styles";
-import { ExpensesBadget } from "../ExpensesBadget/ExpensesBadget";
-import { ExpensesClose } from "../ExpensesClose/ExpensesClose";
+import { ExpensesBadget, ExpensesClose } from "components";
 
 export const ExpensesItem = () => {
   return (

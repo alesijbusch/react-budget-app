@@ -1,6 +1,6 @@
 import React from "react";
 import { StyledExpensesList } from "./styles";
-import { ExpensesItem } from "../ExpensesItem/ExpensesItem";
+import { ExpensesItem } from "components";
 
 export const ExpensesList = () => {
   return (

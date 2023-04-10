@@ -1,9 +1,13 @@
-import React, { useState } from "react";
-import { Container } from "./ui/base";
+import React from "react";
 
-import { Badget } from "./components/Badget/Badget";
-import { Expenses } from "./components/Expenses/Expenses";
-import { Form } from "./components/Form/Form";
+import { Badget, Container, Expenses, Form, FormValue } from "components";
+import { SubmitHandler } from "react-hook-form";
+import { addExpense } from "function/addExpense";
+
+// const onSubmit: SubmitHandler<FormValue> = (data) => {
+//   console.log(addExpense(data));
+//   //const obj = addExpense(data);
+// };
 
 function App() {
   return (

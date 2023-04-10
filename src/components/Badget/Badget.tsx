@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 import { BudgetApp, BudgetGroup, StyledBadget } from "./styles";
-import { BadgetCard } from "../BadgetCard/BadgetCard";
-import { RemainingCard } from "../RemainingCard/RemainingCard";
-import { SpentCard } from "../SpentCard/SpentCard";
-import { Title } from "../Title/Title";
-import { CustomSelect } from "../Select/Select";
-import { Option } from "../../types";
+import { BadgetCard, CustomSelect, RemainingCard, SpentCard, Title, Option } from "components";
 
 const options: Option[] = [
   { value: 2.99, label: "USD" },
