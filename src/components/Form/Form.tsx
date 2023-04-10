@@ -39,10 +39,10 @@ export const Form = () => {
         <Controller
           control={control}
           rules={getValidateRule("text")}
-          render={({ field }) => (
+          render={({ field: { onChange, value } }) => (
             <Input
-              value={field.value}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => field.onChange(e)}
+              value={value}
+              onChange={(e: ChangeEvent<HTMLInputElement>) => onChange(e)}
               placeholder="enter name ..."
               type="text"
             />
