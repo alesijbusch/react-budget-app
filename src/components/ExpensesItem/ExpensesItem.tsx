@@ -1,11 +1,20 @@
 import React from "react";
 import { StyledExpensesItem, StyledExpensesTitle } from "./styles";
-import { ExpensesBadget, ExpensesClose } from "components";
+import { ExpensesBadget, ExpensesClose, FormValue } from "components";
 
-export const ExpensesItem = () => {
+interface ExpenseItemProps {
+  expense: FormValue;
+}
+
+export const ExpensesItem = ({ expense }: ExpenseItemProps) => {
   return (
     <>
       <StyledExpensesItem>
+        <StyledExpensesTitle>{expense.name}</StyledExpensesTitle>
+        <ExpensesBadget sum={expense.cost} />
+        <ExpensesClose />
+      </StyledExpensesItem>
+      {/* <StyledExpensesItem>
         <StyledExpensesTitle>shoping</StyledExpensesTitle>
         <ExpensesBadget sum="$100" />
         <ExpensesClose />
@@ -14,12 +23,7 @@ export const ExpensesItem = () => {
         <StyledExpensesTitle>shoping</StyledExpensesTitle>
         <ExpensesBadget sum="$100" />
         <ExpensesClose />
-      </StyledExpensesItem>
-      <StyledExpensesItem>
-        <StyledExpensesTitle>shoping</StyledExpensesTitle>
-        <ExpensesBadget sum="$100" />
-        <ExpensesClose />
-      </StyledExpensesItem>
+      </StyledExpensesItem> */}
     </>
   );
 };

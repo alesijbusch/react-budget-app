@@ -3,13 +3,15 @@ import { InputGroup, StyledButton, StyledForm } from "./styles";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 // import { v4 as uuidv4 } from "uuid";
 import { FormValue, Input, Title, getValidateRule } from "components";
-import { addExpense } from "function/addExpense";
+//import { addExpense } from "function/addExpense";
+import { useExpensesContext } from "contex/ExpensesContext/ExpensesContext";
 
 // interface FormProps {
 //   onSubmit: any;
 // }
 
 export const Form = () => {
+  const { addExpense } = useExpensesContext();
   // const addExpense = (data: FormValue) => {
   //   return {
   //     ...data,
@@ -29,6 +31,7 @@ export const Form = () => {
 
   const onSubmit: SubmitHandler<FormValue> = (data) => {
     console.log(addExpense(data));
+    addExpense(data);
     //const obj = addExpense(data);
   };
 

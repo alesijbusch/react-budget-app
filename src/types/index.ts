@@ -4,8 +4,14 @@ interface Option {
 }
 
 interface FormValue {
+  id: string;
+  name: string;
+  cost: string;
+}
+interface Expense {
+  id: string;
   name: string;
   cost: string;
 }
 
-export type { Option, FormValue };
+export type { Option, FormValue, Expense };
