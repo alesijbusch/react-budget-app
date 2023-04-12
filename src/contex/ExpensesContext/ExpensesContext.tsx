@@ -4,6 +4,7 @@ import { Expense } from "types";
 
 interface ExpensesContextState {
   expenses: Expense[];
+  deleteExpense: (expense: string) => void;
   addExpense: (expense: Expense) => void;
 }
 
@@ -17,10 +18,16 @@ const useExpensesValue = () => {
   const [expensesValue, setExpensesValue] = useState<ExpensesContextState>(() => {
     return {
       expenses: [],
+      deleteExpense: (id: string) => {
+        setExpensesValue((context) => ({
+          ...context,
+          expenses: context.expenses.filter((expense) => expense.id !== id),
+        }));
+      },
       addExpense: (expense: Expense) => {
-        setExpensesValue((ctx) => ({
-          ...ctx,
-          expenses: [...ctx.expenses, expense],
+        setExpensesValue((context) => ({
+          ...context,
+          expenses: [...context.expenses, expense],
         }));
       },
     };

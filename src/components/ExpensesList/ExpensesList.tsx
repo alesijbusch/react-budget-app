@@ -8,7 +8,7 @@ export const ExpensesList = () => {
   return (
     <StyledExpensesList>
       {expenses.map((expense) => {
-        return <ExpensesItem expense={expense} />;
+        return <ExpensesItem expense={expense}  key={expense.id} />;
       })}
     </StyledExpensesList>
   );

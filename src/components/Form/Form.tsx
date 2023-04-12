@@ -1,7 +1,7 @@
 import React, { ChangeEvent } from "react";
 import { InputGroup, StyledButton, StyledForm } from "./styles";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
-// import { v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from "uuid";
 import { FormValue, Input, Title, getValidateRule } from "components";
 //import { addExpense } from "function/addExpense";
 import { useExpensesContext } from "contex/ExpensesContext/ExpensesContext";
@@ -22,16 +22,11 @@ export const Form = () => {
     handleSubmit,
     control,
     formState: { errors },
-  } = useForm<FormValue>({
-    defaultValues: {
-      name: "",
-      cost: "",
-    },
-  });
+  } = useForm<FormValue>({});
 
   const onSubmit: SubmitHandler<FormValue> = (data) => {
-    console.log(addExpense(data));
-    addExpense(data);
+    console.log(addExpense({...data, id: uuidv4(),}));
+    addExpense({...data, id: uuidv4(),});
     //const obj = addExpense(data);
   };
 

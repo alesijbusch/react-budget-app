@@ -1,11 +1,13 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 import { StyledExpensesClose } from "./styles";
 import { ReactComponent as CloseImg } from "../../assets/icons/close.svg";
 
-export const ExpensesClose = () => {
+
+
+export const ExpensesClose = ( onClick: any)=> {
   return (
-    <StyledExpensesClose>
-      <CloseImg />
+    <StyledExpensesClose onClick={onClick}>
+      <CloseImg/>
     </StyledExpensesClose>
   );
 };
