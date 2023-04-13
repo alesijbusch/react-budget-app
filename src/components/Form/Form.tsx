@@ -1,33 +1,23 @@
 import React, { ChangeEvent } from "react";
-import { InputGroup, StyledButton, StyledForm } from "./styles";
+import { InputGroup, StyledButton, StyledError, StyledForm } from "./styles";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { v4 as uuidv4 } from "uuid";
 import { FormValue, Input, Title, getValidateRule } from "components";
-//import { addExpense } from "function/addExpense";
 import { useExpensesContext } from "contex/ExpensesContext/ExpensesContext";
-
-// interface FormProps {
-//   onSubmit: any;
-// }
 
 export const Form = () => {
   const { addExpense } = useExpensesContext();
-  // const addExpense = (data: FormValue) => {
-  //   return {
-  //     ...data,
-  //     id: uuidv4(),
-  //   };
-  // };
+
   const {
     handleSubmit,
     control,
+    reset,
     formState: { errors },
   } = useForm<FormValue>({});
 
   const onSubmit: SubmitHandler<FormValue> = (data) => {
-    console.log(addExpense({...data, id: uuidv4(),}));
-    addExpense({...data, id: uuidv4(),});
-    //const obj = addExpense(data);
+    addExpense({ ...data, id: uuidv4() });
+    reset();
   };
 
   return (
@@ -48,7 +38,7 @@ export const Form = () => {
           name="name"
           defaultValue=""
         />
-        {errors.name?.message && <span>{errors.name.message}</span>}
+        {errors.name?.message && <StyledError>{errors.name.message}</StyledError>}
 
         <Controller
           control={control}
@@ -64,8 +54,7 @@ export const Form = () => {
           name="cost"
           defaultValue=""
         />
-
-        {errors.cost?.message && <span>{errors.cost.message}</span>}
+        {errors.cost?.message && <StyledError>{errors.cost.message}</StyledError>}
       </InputGroup>
       <StyledButton type="submit">Done</StyledButton>
     </StyledForm>

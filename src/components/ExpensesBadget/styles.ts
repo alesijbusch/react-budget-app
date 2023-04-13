@@ -10,6 +10,7 @@ const StyledExpensesBadget = styled.div`
   line-height: 15px;
   color: #fff;
   margin-right: 20px;
+  text-align: center;
 `;
 
 export { StyledExpensesBadget };

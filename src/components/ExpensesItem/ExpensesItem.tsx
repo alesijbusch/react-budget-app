@@ -7,25 +7,14 @@ interface ExpenseItemProps {
   expense: FormValue;
 }
 
-export const ExpensesItem = ({ expense: {name, cost, id} }: ExpenseItemProps) => {
+export const ExpensesItem = ({ expense: { name, cost, id } }: ExpenseItemProps) => {
   const { deleteExpense } = useExpensesContext();
   return (
-    <>
-      <StyledExpensesItem>
-        <StyledExpensesTitle>{name}</StyledExpensesTitle>
-        <ExpensesBadget sum={cost} />
-        <ExpensesClose onClick={() => deleteExpense(id)} />
-      </StyledExpensesItem>
-      {/* <StyledExpensesItem>
-        <StyledExpensesTitle>shoping</StyledExpensesTitle>
-        <ExpensesBadget sum="$100" />
-        <ExpensesClose />
-      </StyledExpensesItem>
-      <StyledExpensesItem>
-        <StyledExpensesTitle>shoping</StyledExpensesTitle>
-        <ExpensesBadget sum="$100" />
-        <ExpensesClose />
-      </StyledExpensesItem> */}
-    </>
+    <StyledExpensesItem>
+      <StyledExpensesTitle>{name}</StyledExpensesTitle>
+      <ExpensesBadget sum={cost} />
+      {/* <ExpensesClose onClick={() => deleteExpense(id)} /> */}
+      <button onClick={() => deleteExpense(id)}>x</button>
+    </StyledExpensesItem>
   );
 };

@@ -1,4 +1,3 @@
-import React, { useContext } from "react";
 import { StyledExpensesList } from "./styles";
 import { ExpensesItem } from "components";
 import { useExpensesContext } from "contex/ExpensesContext/ExpensesContext";
@@ -8,7 +7,7 @@ export const ExpensesList = () => {
   return (
     <StyledExpensesList>
       {expenses.map((expense) => {
-        return <ExpensesItem expense={expense}  key={expense.id} />;
+        return <ExpensesItem expense={expense} key={expense.id} />;
       })}
     </StyledExpensesList>
   );

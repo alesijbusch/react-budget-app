@@ -40,4 +40,9 @@ const StyledButton = styled.button`
   border-radius: 10px;
   cursor: pointer;
 `;
-export { StyledForm, StyledInput, InputGroup, StyledButton };
+const StyledError = styled.span`
+  font-size: 13px;
+  color: red;
+`;
+
+export { StyledForm, StyledInput, InputGroup, StyledButton, StyledError };
