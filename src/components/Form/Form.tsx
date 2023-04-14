@@ -48,7 +48,7 @@ export const Form = () => {
               value={field.value}
               onChange={(e: ChangeEvent<HTMLInputElement>) => field.onChange(e)}
               placeholder="enter cost ..."
-              type="number"
+              type="text"
             />
           )}
           name="cost"

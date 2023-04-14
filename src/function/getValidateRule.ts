@@ -1,17 +1,13 @@
-// type getValidateRuleProps = {
-//   type: string;
-// }
-
 export const getValidateRule = (type: string) => {
   if (type === "text") {
     return {
       required: "Enter name",
       maxLength: {
-        message: "Maximum letter input 15",
+        message: "The input has to be less than 15 characters",
         value: 15,
       },
       pattern: {
-        message: "Enter only letters",
+        message: "Enter a literal value",
         value: /^[A-Za-zА-Яа-я]+$/i,
       },
     };
@@ -19,14 +15,13 @@ export const getValidateRule = (type: string) => {
     return {
       required: "Enter cost",
       maxLength: {
-        message: "Maximum number input 5",
+        message: "The input has to be less than 5 characters",
         value: 5,
       },
-      // pattern: {
-      //   message: "Enter only number",
-      //   value: /^\d+$/,
-      // },
-      //valueAsNumber: true,
+      pattern: {
+        message: "Enter Numeric value",
+        value: /^\d+$/,
+      },
     };
   }
 };

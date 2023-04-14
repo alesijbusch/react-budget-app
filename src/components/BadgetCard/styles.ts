@@ -41,4 +41,7 @@ const StyledBadgetCardButton = styled.button`
   border-radius: 10px;
   cursor: pointer;
 `;
-export { StyledBadgetCard, StyledBadgetCardInput, StyledBadgetCardButton };
+
+const StyledBadgetCardForm = styled.form``;
+
+export { StyledBadgetCard, StyledBadgetCardInput, StyledBadgetCardButton, StyledBadgetCardForm };
