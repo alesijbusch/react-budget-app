@@ -13,5 +13,10 @@ interface Expense {
   name: string;
   cost: string;
 }
-
-export type { Option, FormValue, Expense };
+interface BadgetCardProps {
+  budget: string;
+}
+interface Currency {
+  curency: string
+}
+export type { Option, FormValue, Expense, BadgetCardProps, Currency };

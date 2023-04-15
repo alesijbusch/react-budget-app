@@ -41,7 +41,15 @@ const StyledBadgetCardButton = styled.button`
   border-radius: 10px;
   cursor: pointer;
 `;
-
+const StyledBadgetCardText = styled.p`
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  margin-right: 15px;
+  background: #7cc6fe;
+  color: #000;
+`
 const StyledBadgetCardForm = styled.form``;
 
-export { StyledBadgetCard, StyledBadgetCardInput, StyledBadgetCardButton, StyledBadgetCardForm };
+export { StyledBadgetCard, StyledBadgetCardInput, StyledBadgetCardButton, StyledBadgetCardForm, StyledBadgetCardText };

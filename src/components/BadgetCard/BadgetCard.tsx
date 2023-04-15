@@ -4,54 +4,55 @@ import {
   StyledBadgetCardInput,
   StyledBadgetCardButton,
   StyledBadgetCardForm,
+  StyledBadgetCardText,
 } from "./styles";
 import { useToggle } from "hooks/useToggle";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { getValidateRule } from "function/getValidateRule";
-
-interface BadgetCardProps {
-  budget: string;
-}
+import { BadgetCardProps } from "types";
+import { useBadgetContext } from "contex/BudgetContext/BudgetContext";
 
 export const BadgetCard = () => {
-  const [text, setText] = useState(0);
+  const { badget, addBadget } = useBadgetContext();
   const [isEditMode, toggleEditMode] = useToggle(true);
 
   const {
     handleSubmit,
     register,
-    // reset,
+    reset,
     formState: { errors },
   } = useForm<BadgetCardProps>();
-  const onSubmit: SubmitHandler<BadgetCardProps> = (data) => {
-    console.log(data);
 
-    setText({data.budget});
-    // reset();
+  const onSubmit: SubmitHandler<BadgetCardProps> = (data) => {
+    console.log(+data.budget);
+    addBadget(+data.budget);
+    reset();
+    toggleEditMode();
   };
-  const p = `Budget: ${JSON.stringify(text)}`;
+
   return (
     <>
-      <StyledBadgetCardForm onSubmit={handleSubmit(onSubmit)}>
+      {isEditMode ? (
         <StyledBadgetCard>
-          {isEditMode ? (
-            p
-          ) : (
-            <>
-              <StyledBadgetCardInput
-                {...register("budget", getValidateRule("number"))}
-                type="text"
-                placeholder="Enter  budget ..."
-              />
-              {errors.budget?.message && <p>{errors.budget.message}</p>}
-            </>
-          )}
-
-          <StyledBadgetCardButton onClick={toggleEditMode}>
-            {isEditMode ? "Edit" : "Save"}
+          <StyledBadgetCardText>Badget: {badget}</StyledBadgetCardText>
+          <StyledBadgetCardButton type="button" onClick={toggleEditMode}>
+            Save
           </StyledBadgetCardButton>
         </StyledBadgetCard>
-      </StyledBadgetCardForm>
+      ) : (
+        <StyledBadgetCardForm onSubmit={handleSubmit(onSubmit)}>
+          <StyledBadgetCard>
+            <StyledBadgetCardInput
+              {...register("budget", getValidateRule("number"))}
+              type="text"
+              placeholder="Enter  budget ..."
+            />
+            {errors.budget?.message && <p>{errors.budget.message}</p>}
+
+            <StyledBadgetCardButton>Edit</StyledBadgetCardButton>
+          </StyledBadgetCard>
+        </StyledBadgetCardForm>
+      )}
     </>
   );
 };
