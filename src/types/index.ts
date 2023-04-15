@@ -1,5 +1,5 @@
 interface Option {
-  value: number;
+  value: string;
   label: string;
 }
 
@@ -17,6 +17,6 @@ interface BadgetCardProps {
   budget: string;
 }
 interface Currency {
-  curency: string
+  curency: string;
 }
 export type { Option, FormValue, Expense, BadgetCardProps, Currency };

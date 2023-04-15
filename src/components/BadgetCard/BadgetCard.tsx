@@ -1,18 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   StyledBadgetCard,
   StyledBadgetCardInput,
   StyledBadgetCardButton,
   StyledBadgetCardForm,
   StyledBadgetCardText,
+  StyledBadgetCardError,
 } from "./styles";
 import { useToggle } from "hooks/useToggle";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { getValidateRule } from "function/getValidateRule";
 import { BadgetCardProps } from "types";
 import { useBadgetContext } from "contex/BudgetContext/BudgetContext";
-
+import { useCurencyContext } from "contex/CurrencyContext/CurrencyContext";
 export const BadgetCard = () => {
+  const { curency } = useCurencyContext();
   const { badget, addBadget } = useBadgetContext();
   const [isEditMode, toggleEditMode] = useToggle(true);
 
@@ -29,12 +31,15 @@ export const BadgetCard = () => {
     reset();
     toggleEditMode();
   };
-
+  const getCurency = curency.map(({ value }) => value);
   return (
     <>
       {isEditMode ? (
         <StyledBadgetCard>
-          <StyledBadgetCardText>Badget: {badget}</StyledBadgetCardText>
+          <StyledBadgetCardText>
+            Badget: {getCurency}
+            {badget}
+          </StyledBadgetCardText>
           <StyledBadgetCardButton type="button" onClick={toggleEditMode}>
             Save
           </StyledBadgetCardButton>
@@ -47,9 +52,10 @@ export const BadgetCard = () => {
               type="text"
               placeholder="Enter  budget ..."
             />
-            {errors.budget?.message && <p>{errors.budget.message}</p>}
-
             <StyledBadgetCardButton>Edit</StyledBadgetCardButton>
+            {errors.budget?.message && (
+              <StyledBadgetCardError>{errors.budget.message}</StyledBadgetCardError>
+            )}
           </StyledBadgetCard>
         </StyledBadgetCardForm>
       )}

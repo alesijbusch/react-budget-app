@@ -14,4 +14,5 @@ const BudgetGroup = styled.div`
   display: grid;
   grid-gap: 20px;
 `;
+
 export { StyledBadget, BudgetApp, BudgetGroup };

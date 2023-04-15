@@ -49,7 +49,19 @@ const StyledBadgetCardText = styled.p`
   margin-right: 15px;
   background: #7cc6fe;
   color: #000;
-`
+`;
 const StyledBadgetCardForm = styled.form``;
+const StyledBadgetCardError = styled.p`
+  font-size: 13px;
+  color: red;
+  width: 100%;
+`;
 
-export { StyledBadgetCard, StyledBadgetCardInput, StyledBadgetCardButton, StyledBadgetCardForm, StyledBadgetCardText };
+export {
+  StyledBadgetCard,
+  StyledBadgetCardInput,
+  StyledBadgetCardButton,
+  StyledBadgetCardForm,
+  StyledBadgetCardText,
+  StyledBadgetCardError,
+};

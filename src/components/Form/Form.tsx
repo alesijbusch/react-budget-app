@@ -4,9 +4,11 @@ import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { v4 as uuidv4 } from "uuid";
 import { FormValue, Input, Title, getValidateRule } from "components";
 import { useExpensesContext } from "contex/ExpensesContext/ExpensesContext";
+import { useBadgetContext } from "contex/BudgetContext/BudgetContext";
 
 export const Form = () => {
   const { addExpense } = useExpensesContext();
+  const { badget } = useBadgetContext();
 
   const {
     handleSubmit,
@@ -16,7 +18,12 @@ export const Form = () => {
   } = useForm<FormValue>({});
 
   const onSubmit: SubmitHandler<FormValue> = (data) => {
-    addExpense({ ...data, id: uuidv4() });
+    if (badget > 1) {
+      addExpense({ ...data, id: uuidv4() });
+    } else {
+      alert("Enter budget");
+    }
+
     reset();
   };
 

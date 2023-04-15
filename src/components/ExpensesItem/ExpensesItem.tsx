@@ -1,20 +1,26 @@
 import React from "react";
-import { StyledExpensesItem, StyledExpensesTitle } from "./styles";
-import { ExpensesBadget, ExpensesClose, FormValue } from "components";
+import { StyledExpensesClose, StyledExpensesItem, StyledExpensesTitle } from "./styles";
+import { ExpensesBadget } from "components";
+import { ReactComponent as CloseImg } from "../../assets/icons/close.svg";
 import { useExpensesContext } from "contex/ExpensesContext/ExpensesContext";
+import { useCurencyContext } from "contex/CurrencyContext/CurrencyContext";
+import { Expense } from "types";
 
 interface ExpenseItemProps {
-  expense: FormValue;
+  expense: Expense;
 }
 
 export const ExpensesItem = ({ expense: { name, cost, id } }: ExpenseItemProps) => {
+  const { curency } = useCurencyContext();
   const { deleteExpense } = useExpensesContext();
+  const getCurency = curency.map(({ value }) => value);
   return (
     <StyledExpensesItem>
       <StyledExpensesTitle>{name}</StyledExpensesTitle>
-      <ExpensesBadget sum={cost} />
-      {/* <ExpensesClose onClick={() => deleteExpense(id)} /> */}
-      <button onClick={() => deleteExpense(id)}>x</button>
+      <ExpensesBadget curency={getCurency} sum={cost}></ExpensesBadget>
+      <StyledExpensesClose onClick={() => deleteExpense(id)}>
+        <CloseImg />
+      </StyledExpensesClose>
     </StyledExpensesItem>
   );
 };
