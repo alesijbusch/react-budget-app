@@ -9,7 +9,7 @@ import {
 } from "./styles";
 import { useToggle } from "hooks/useToggle";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { getValidateRule } from "function/getValidateRule";
+import { getValidateRule } from "getValidateRule/getValidateRule";
 import { BadgetCardProps } from "types";
 import { useBadgetContext } from "contex/BudgetContext/BudgetContext";
 import { useCurencyContext } from "contex/CurrencyContext/CurrencyContext";

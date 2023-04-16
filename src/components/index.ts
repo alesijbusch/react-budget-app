@@ -3,7 +3,7 @@ import { Form } from "components/Form/Form";
 import { Badget } from "components/Badget/Badget";
 import { Expenses } from "components/Expenses/Expenses";
 import { Title } from "./Title/Title";
-import { getValidateRule } from "function/getValidateRule";
+import { getValidateRule } from "getValidateRule/getValidateRule";
 import { FormValue } from "types";
 import { Input } from "./Input/Input";
 import { BadgetCard } from "./BadgetCard/BadgetCard";
