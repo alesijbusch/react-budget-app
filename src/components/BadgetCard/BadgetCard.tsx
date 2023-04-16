@@ -26,18 +26,17 @@ export const BadgetCard = () => {
   } = useForm<BadgetCardProps>();
 
   const onSubmit: SubmitHandler<BadgetCardProps> = (data) => {
-    console.log(+data.budget);
-    addBadget(+data.budget);
+    addBadget(data.budget);
     reset();
     toggleEditMode();
   };
-  const getCurency = curency.map(({ value }) => value);
+
   return (
     <>
       {isEditMode ? (
         <StyledBadgetCard>
           <StyledBadgetCardText>
-            Badget: {getCurency}
+            Badget: {curency.value}
             {badget}
           </StyledBadgetCardText>
           <StyledBadgetCardButton type="button" onClick={toggleEditMode}>

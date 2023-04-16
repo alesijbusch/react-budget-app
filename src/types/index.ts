@@ -14,7 +14,7 @@ interface Expense {
   cost: string;
 }
 interface BadgetCardProps {
-  budget: string;
+  budget: number;
 }
 interface Currency {
   curency: string;

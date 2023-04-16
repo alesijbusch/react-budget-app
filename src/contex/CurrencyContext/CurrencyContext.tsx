@@ -4,7 +4,7 @@ import { Option } from "components";
 import { Currency } from "config/currency";
 
 interface CurencyContextState {
-  curency: Option[];
+  curency: Option;
   options: Option[];
   addCurency: (curency: Option) => void;
 }
@@ -24,12 +24,12 @@ const CurencyContext = createContext<CurencyContextState>({} as CurencyContextSt
 const useCurencyValue = () => {
   const [curencyValue, setCurencyValue] = useState<CurencyContextState>(() => {
     return {
-      curency: [options[0]],
+      curency: options[0],
       options: options,
       addCurency: (curency: Option) => {
         setCurencyValue((context) => ({
           ...context,
-          curency: [curency],
+          curency: curency,
         }));
       },
     };

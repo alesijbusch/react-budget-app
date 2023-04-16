@@ -13,11 +13,11 @@ interface ExpenseItemProps {
 export const ExpensesItem = ({ expense: { name, cost, id } }: ExpenseItemProps) => {
   const { curency } = useCurencyContext();
   const { deleteExpense } = useExpensesContext();
-  const getCurency = curency.map(({ value }) => value);
+
   return (
     <StyledExpensesItem>
       <StyledExpensesTitle>{name}</StyledExpensesTitle>
-      <ExpensesBadget curency={getCurency} sum={cost}></ExpensesBadget>
+      <ExpensesBadget curency={curency.value} sum={cost}></ExpensesBadget>
       <StyledExpensesClose onClick={() => deleteExpense(id)}>
         <CloseImg />
       </StyledExpensesClose>

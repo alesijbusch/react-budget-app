@@ -4,7 +4,7 @@ import { Option } from "types";
 
 interface ExpensesBadgetProps {
   sum: string;
-  curency: string[];
+  curency: string;
 }
 
 export const ExpensesBadget = ({ sum, curency }: ExpensesBadgetProps) => {

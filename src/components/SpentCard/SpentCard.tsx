@@ -1,32 +1,16 @@
 import React from "react";
-import { StyledSpentCard, StyledSpentCardInput } from "./styles";
-import { useExpensesContext } from "contex/ExpensesContext/ExpensesContext";
-import { useCurencyContext } from "contex/CurrencyContext/CurrencyContext";
+import { StyledSpentCardText } from "./styles";
 
-export const SpentCard = () => {
-  const { expenses } = useExpensesContext();
-  const { curency } = useCurencyContext();
+interface SpentCardProps {
+  curency: string;
+  setSpent: number;
+}
 
-  const getCurency = curency.map(({ value }) => value);
-  const getExpensesValue = expenses.map(({ cost }) => cost);
-  const getexpenses = getExpensesValue.reduce((total, cost) => total + +cost, 0);
-
-  console.log(getCurency);
-  console.log(getExpensesValue);
-  console.log(getexpenses);
-
-  const setSpent = () => {
-    if (String(getCurency)) {
-      return getexpenses;
-    }
-  };
-
+export const SpentCard = ({ curency, setSpent }: SpentCardProps) => {
   return (
-    <StyledSpentCard>
-      <StyledSpentCardInput>
-        Spent so far: {getCurency}
-        {setSpent()}
-      </StyledSpentCardInput>
-    </StyledSpentCard>
+    <StyledSpentCardText>
+      Spent so far: {curency}
+      {setSpent}
+    </StyledSpentCardText>
   );
 };

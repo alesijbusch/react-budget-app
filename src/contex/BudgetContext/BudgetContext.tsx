@@ -19,7 +19,7 @@ const useBadgetValue = () => {
       addBadget: (badget: number) => {
         setBadgetValue((context) => ({
           ...context,
-          badget: badget,
+          badget: +badget,
         }));
       },
     };
