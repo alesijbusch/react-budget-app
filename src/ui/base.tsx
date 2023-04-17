@@ -7,6 +7,10 @@ const Container = styled.div`
   @media (min-width: 375px) {
     margin: 0 20px;
   }
+  @media (min-width: 678px) {
+    width: 600px;
+    margin: 0 auto;
+  }
 `;
 
 export { Container };
