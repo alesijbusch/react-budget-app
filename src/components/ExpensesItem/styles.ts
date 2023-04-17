@@ -8,9 +8,9 @@ const StyledExpensesItem = styled.li`
   border-bottom: 2px solid #ccd5ff;
 `;
 const StyledExpensesTitle = styled.p`
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
   line-height: 19px;
 `;
 const StyledExpensesClose = styled.div`

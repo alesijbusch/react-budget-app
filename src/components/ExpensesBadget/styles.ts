@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
 const StyledExpensesBadget = styled.div`
-  background: #23c9ff;
-  border-radius: 10px;
   padding: 3px 12px;
+  margin-right: 20px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
+  text-align: center;
   line-height: 15px;
   color: #fff;
-  margin-right: 20px;
-  text-align: center;
+  background: #23c9ff;
+  border-radius: 10px;
 `;
 
 export { StyledExpensesBadget };

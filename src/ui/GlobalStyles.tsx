@@ -65,5 +65,4 @@ input{
 body {
     font-family: 'Inter', sans-serif;
 }
-
 `;

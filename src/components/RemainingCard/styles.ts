@@ -9,12 +9,12 @@ import styled from "styled-components";
 // `;
 const StyledRemainingCardText = styled.p`
   padding: 36px 20px 40px;
-  border-radius: 10px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
   line-height: 24px;
   background: #ccd5ff;
+  border-radius: 10px;
 `;
 
 export { StyledRemainingCardText };
