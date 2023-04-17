@@ -19,7 +19,7 @@ export const Form = () => {
   } = useForm<Expense>({});
 
   const onSubmit: SubmitHandler<Expense> = (data) => {
-    if (badget > 1) {
+    if (badget > 0) {
       addExpense({ ...data, id: uuidv4() });
     } else {
       alert("Enter budget");

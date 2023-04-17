@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledRemainingCardText } from "./styles";
+import { StyledRemainingCardText, StyledOverspendingText } from "./styles";
 import { useBadgetContext, useCurencyContext, useExpensesContext } from "contex";
 
 interface RemainingCardProps {
@@ -8,24 +8,19 @@ interface RemainingCardProps {
 }
 
 export const RemainingCard = ({ curency, setRemaining }: RemainingCardProps) => {
-  //const text = +setRemaining < 0 ? "Overspending by " : "Remaining: ";
-  //const sumRemaining = +setRemaining < 0 ? Math.abs(+setRemaining) : +setRemaining;
   return (
-    <StyledRemainingCardText>
-      Remaining: {curency}
-      {setRemaining}
-    </StyledRemainingCardText>
+    <>
+      {setRemaining >= 0 ? (
+        <StyledRemainingCardText>
+          Remaining: {curency}
+          {setRemaining}
+        </StyledRemainingCardText>
+      ) : (
+        <StyledOverspendingText>
+          Overspending by {curency}
+          {Math.abs(setRemaining)}
+        </StyledOverspendingText>
+      )}
+    </>
   );
 };
-
-// export const RemainingCard = ({ curency, setRemaining }: RemainingCardProps) => {
-//   const text = +setRemaining < 0 ? "Overspending by " : "Remaining: ";
-//   const sumRemaining = +setRemaining < 0 ? Math.abs(+setRemaining) : +setRemaining;
-//   return (
-//     <StyledRemainingCardText>
-//       {text}
-//       {curency}
-//       {sumRemaining}
-//     </StyledRemainingCardText>
-//   );
-// };
