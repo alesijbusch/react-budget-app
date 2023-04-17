@@ -1,6 +1,5 @@
 import React, { ReactNode, createContext, useContext, useState } from "react";
-
-import { Option } from "components";
+import { Option } from "types";
 
 interface AppContextState {
   app: Option[];

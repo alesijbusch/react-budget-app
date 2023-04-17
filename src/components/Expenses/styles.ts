@@ -4,5 +4,8 @@ const ExpensesGroup = styled.div`
   display: grid;
   grid-gap: 30px;
 `;
-
-export { ExpensesGroup };
+const ExpensesNotFound = styled.div`
+  padding: 10px;
+  margin: 0 auto;
+`;
+export { ExpensesGroup, ExpensesNotFound };

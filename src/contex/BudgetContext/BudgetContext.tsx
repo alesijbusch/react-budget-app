@@ -1,5 +1,4 @@
 import React, { ReactNode, createContext, useContext, useState } from "react";
-import { BadgetCardProps } from "types";
 
 interface BudgetContextState {
   badget: number;

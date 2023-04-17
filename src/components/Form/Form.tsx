@@ -2,9 +2,10 @@ import React, { ChangeEvent } from "react";
 import { InputGroup, StyledButton, StyledError, StyledForm } from "./styles";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { v4 as uuidv4 } from "uuid";
-import { FormValue, Input, Title, getValidateRule } from "components";
-import { useExpensesContext } from "contex/ExpensesContext/ExpensesContext";
-import { useBadgetContext } from "contex/BudgetContext/BudgetContext";
+import { Input, Title } from "components";
+import { useBadgetContext, useExpensesContext } from "contex";
+import { getValidateRule } from "getValidateRule/getValidateRule";
+import { Expense } from "types";
 
 export const Form = () => {
   const { addExpense } = useExpensesContext();
@@ -15,9 +16,9 @@ export const Form = () => {
     control,
     reset,
     formState: { errors },
-  } = useForm<FormValue>({});
+  } = useForm<Expense>({});
 
-  const onSubmit: SubmitHandler<FormValue> = (data) => {
+  const onSubmit: SubmitHandler<Expense> = (data) => {
     if (badget > 1) {
       addExpense({ ...data, id: uuidv4() });
     } else {

@@ -1,6 +1,5 @@
 import React from "react";
 import { StyledExpensesBadget } from "./styles";
-import { Option } from "types";
 
 interface ExpensesBadgetProps {
   sum: string;

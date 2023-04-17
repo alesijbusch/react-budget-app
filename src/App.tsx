@@ -1,5 +1,6 @@
 import React from "react";
-import { Badget, Container, Expenses, Form } from "components";
+import { Badget, Expenses, Form } from "components";
+import { Container } from "ui";
 
 function App() {
   return (

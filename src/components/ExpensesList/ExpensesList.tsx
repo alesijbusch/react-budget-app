@@ -1,9 +1,5 @@
 import { StyledExpensesList } from "./styles";
-import { ExpensesItem, Input } from "components";
-import { useBadgetContext } from "contex/BudgetContext/BudgetContext";
-import { useExpensesContext } from "contex/ExpensesContext/ExpensesContext";
-import { useDebounce } from "hooks/useDebounce";
-import { ChangeEvent, useState } from "react";
+import { ExpensesItem } from "components";
 import { Expense } from "types";
 
 interface ExpensesListProps {

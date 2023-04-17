@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { BudgetApp, BudgetGroup, StyledBadget } from "./styles";
-import { BadgetCard, CustomSelect, RemainingCard, SpentCard, Title, Option } from "components";
-import { useCurencyContext } from "contex/CurrencyContext/CurrencyContext";
+import { BadgetCard, CustomSelect, RemainingCard, SpentCard, Title } from "components";
 import { SingleValue } from "react-select";
-import { useExpensesContext } from "contex/ExpensesContext/ExpensesContext";
-import { useBadgetContext } from "contex/BudgetContext/BudgetContext";
+import { useBadgetContext, useCurencyContext, useExpensesContext } from "contex";
+import { Option } from "types";
 
 export const Badget = () => {
   const [spent, setSpent] = useState(0);

@@ -1,8 +1,6 @@
 import React from "react";
 import { StyledRemainingCardText } from "./styles";
-import { useExpensesContext } from "contex/ExpensesContext/ExpensesContext";
-import { useCurencyContext } from "contex/CurrencyContext/CurrencyContext";
-import { useBadgetContext } from "contex/BudgetContext/BudgetContext";
+import { useBadgetContext, useCurencyContext, useExpensesContext } from "contex";
 
 interface RemainingCardProps {
   curency: string;

@@ -1,7 +1,7 @@
 import React from "react";
 import Select, { SingleValue } from "react-select";
 import { SelectStyles } from "./styles";
-import { Option } from "components";
+import { Option } from "types";
 
 interface CustomSelectProps {
   options: Option[];

@@ -2,8 +2,7 @@ import React from "react";
 import { StyledExpensesClose, StyledExpensesItem, StyledExpensesTitle } from "./styles";
 import { ExpensesBadget } from "components";
 import { ReactComponent as CloseImg } from "../../assets/icons/close.svg";
-import { useExpensesContext } from "contex/ExpensesContext/ExpensesContext";
-import { useCurencyContext } from "contex/CurrencyContext/CurrencyContext";
+import { useCurencyContext, useExpensesContext } from "contex";
 import { Expense } from "types";
 
 interface ExpenseItemProps {

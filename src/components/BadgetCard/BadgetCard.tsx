@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   StyledBadgetCard,
   StyledBadgetCardInput,
@@ -7,12 +7,15 @@ import {
   StyledBadgetCardText,
   StyledBadgetCardError,
 } from "./styles";
-import { useToggle } from "hooks/useToggle";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { useBadgetContext, useCurencyContext } from "contex";
 import { getValidateRule } from "getValidateRule/getValidateRule";
-import { BadgetCardProps } from "types";
-import { useBadgetContext } from "contex/BudgetContext/BudgetContext";
-import { useCurencyContext } from "contex/CurrencyContext/CurrencyContext";
+import { useToggle } from "hooks";
+
+interface BadgetCardProps {
+  budget: number;
+}
+
 export const BadgetCard = () => {
   const { curency } = useCurencyContext();
   const { badget, addBadget } = useBadgetContext();
