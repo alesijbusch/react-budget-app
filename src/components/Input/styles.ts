@@ -11,6 +11,7 @@ const StyledInput = styled.input`
   border-radius: 10px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
   outline: 0;
+  background: #fff;
   ::placeholder {
     font-family: "Inter", sans-serif;
     font-size: 16px;

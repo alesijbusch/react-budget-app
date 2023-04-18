@@ -9,7 +9,6 @@ import { SpentCard } from "./SpentCard/SpentCard";
 import { CustomSelect } from "./Select/Select";
 import { ExpensesList } from "./ExpensesList/ExpensesList";
 import { ExpensesBadget } from "./ExpensesBadget/ExpensesBadget";
-import { ExpensesClose } from "./ExpensesClose/ExpensesClose";
 import { ExpensesItem } from "./ExpensesItem/ExpensesItem";
 
 export {
@@ -24,6 +23,5 @@ export {
   CustomSelect,
   ExpensesList,
   ExpensesBadget,
-  ExpensesClose,
   ExpensesItem,
 };
