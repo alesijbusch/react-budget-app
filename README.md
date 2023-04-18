@@ -5,7 +5,7 @@
 
 <p style="padding:20px 0;">This is a project for calculating personal costs</p>
 
-<img src="/preview/ract-budget-app.png" style="width: 70%; margin: 0 auto; display: block;">
+<img src="/preview/ract-budget-app.png" style="width: 70%; margin: 0 auto!important; display: block!important;">
 
 <h2 height="25">Built With</h2>
 
@@ -21,4 +21,4 @@
 
 <h2>Contact</h2>
 
-<p style="padding:20px 0;">Your Name -  <a href="https://github.com/alesijbusch" target="_blank">Alesia Bushkevich</a> <a href="mailto:alesijbusch.gmail.com" target="_blank">alesijbusch.gmail.com</a></p>
+<p style="padding:20px 0;">Your Name -  <a href="https://github.com/alesijbusch" target="_blank">Alesia Bushkevich</a> - <a href="mailto:alesijbusch.gmail.com" target="_blank">alesijbusch.gmail.com</a></p>
