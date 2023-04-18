@@ -43,7 +43,7 @@ export const BadgetCard = () => {
             {badget}
           </StyledBadgetCardText>
           <StyledBadgetCardButton type="button" onClick={toggleEditMode}>
-            Save
+            Edit
           </StyledBadgetCardButton>
         </StyledBadgetCard>
       ) : (
@@ -54,7 +54,7 @@ export const BadgetCard = () => {
               type="text"
               placeholder="Enter  budget ..."
             />
-            <StyledBadgetCardButton>Edit</StyledBadgetCardButton>
+            <StyledBadgetCardButton>Save</StyledBadgetCardButton>
             {errors.budget?.message && (
               <StyledBadgetCardError>{errors.budget.message}</StyledBadgetCardError>
             )}

@@ -1,7 +1,7 @@
 import { StylesConfig } from "react-select";
-import { Option } from "../../types";
+import { CurrencyOption } from "../../types";
 
-export const SelectStyles: StylesConfig<Option, false> = {
+export const SelectStyles: StylesConfig<CurrencyOption, false> = {
   control: (styles) => ({
     ...styles,
     lineHeight: "15px",

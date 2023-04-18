@@ -1,16 +1,17 @@
 import React from "react";
 import { StyledSpentCardText } from "./styles";
+import { useCurencyContext, useExpensesContext } from "contex";
 
-interface SpentCardProps {
-  curency: string;
-  setSpent: number;
-}
+export const SpentCard = () => {
+  const { expenses } = useExpensesContext();
+  const { curency } = useCurencyContext();
 
-export const SpentCard = ({ curency, setSpent }: SpentCardProps) => {
+  const spent = expenses.reduce((spent, expense) => spent + +expense.cost, 0);
+
   return (
     <StyledSpentCardText>
-      Spent so far: {curency}
-      {setSpent}
+      Spent so far: {curency.value}
+      {spent}
     </StyledSpentCardText>
   );
 };

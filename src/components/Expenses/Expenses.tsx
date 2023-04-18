@@ -8,21 +8,13 @@ export const Expenses = () => {
   const { expenses } = useExpensesContext();
   const [search, setSearch] = useState("");
   const debaunceSearch = useDebounce(search);
-  // const [noResult, setNoresult] = useState(false);
 
   const handelSearch = (event: ChangeEvent<HTMLInputElement>) => {
     setSearch(event.target.value);
   };
   const filtredExpenses = expenses.filter((expense) => {
-    if (debaunceSearch === "") return expense.name;
     return expense.name.toLowerCase().includes(debaunceSearch.toLowerCase());
   });
-
-  // useEffect(() => {
-  //   if (filtredExpenses.length === 0 && debaunceSearch === "") {
-  //     setNoresult(true);
-  //   }
-  // }, [filtredExpenses, debaunceSearch]);
 
   return (
     <ExpensesGroup>

@@ -1,23 +1,25 @@
 import React from "react";
 import { StyledRemainingCardText, StyledOverspendingText } from "./styles";
+import { useBadgetContext, useCurencyContext, useExpensesContext } from "contex";
 
-interface RemainingCardProps {
-  curency: string;
-  setRemaining: number;
-}
+export const RemainingCard = () => {
+  const { badget } = useBadgetContext();
+  const { expenses } = useExpensesContext();
+  const { curency } = useCurencyContext();
 
-export const RemainingCard = ({ curency, setRemaining }: RemainingCardProps) => {
+  const remaining = badget - expenses.reduce((spent, expense) => spent + +expense.cost, 0);
+
   return (
     <>
-      {setRemaining >= 0 ? (
+      {remaining >= 0 ? (
         <StyledRemainingCardText>
-          Remaining: {curency}
-          {setRemaining}
+          Remaining: {curency.value}
+          {remaining}
         </StyledRemainingCardText>
       ) : (
         <StyledOverspendingText>
-          Overspending by {curency}
-          {Math.abs(setRemaining)}
+          Overspending by {curency.value}
+          {Math.abs(remaining)}
         </StyledOverspendingText>
       )}
     </>

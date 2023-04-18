@@ -1,20 +1,22 @@
 import React from "react";
 import Select, { SingleValue } from "react-select";
 import { SelectStyles } from "./styles";
-import { Option } from "types";
+import { CurrencyOption } from "types";
+import { useCurencyContext } from "contex";
 
-interface CustomSelectProps {
-  options: Option[];
-  setTips: (value: SingleValue<Option>) => void;
-  defaultValue: Option;
-}
-
-export const CustomSelect = ({ options, setTips, defaultValue }: CustomSelectProps) => {
+export const CustomSelect = () => {
+  const { curencies, curency, setCurency } = useCurencyContext();
+  const handleTips = (event: SingleValue<CurrencyOption>) => {
+    if (event) {
+      setCurency(event);
+    }
+  };
   return (
     <Select
-      options={options}
-      onChange={setTips}
-      defaultValue={defaultValue}
+      options={curencies}
+      onChange={handleTips}
+      defaultValue={curency}
+      isSearchable={false}
       styles={SelectStyles}
     />
   );

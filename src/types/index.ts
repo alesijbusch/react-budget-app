@@ -1,4 +1,4 @@
-interface Option {
+interface CurrencyOption {
   value: string;
   label: string;
 }
@@ -9,7 +9,4 @@ interface Expense {
   cost: string;
 }
 
-interface Currency {
-  curency: string;
-}
-export type { Option, Expense, Currency };
+export type { CurrencyOption, Expense };
