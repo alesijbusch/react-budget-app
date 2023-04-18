@@ -23,5 +23,17 @@ export const getValidateRule = (type: string) => {
         value: /^\d+$/,
       },
     };
+  } else if (type === "budget") {
+    return {
+      required: "Enter budget",
+      maxLength: {
+        message: "The input has to be less than 5 characters",
+        value: 5,
+      },
+      pattern: {
+        message: "Enter Numeric value",
+        value: /^\d+$/,
+      },
+    };
   }
 };

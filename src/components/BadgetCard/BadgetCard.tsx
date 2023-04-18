@@ -50,7 +50,7 @@ export const BadgetCard = () => {
         <StyledBadgetCardForm onSubmit={handleSubmit(onSubmit)}>
           <StyledBadgetCard>
             <StyledBadgetCardInput
-              {...register("budget", getValidateRule("number"))}
+              {...register("budget", getValidateRule("budget"))}
               type="text"
               placeholder="Enter  budget ..."
             />
