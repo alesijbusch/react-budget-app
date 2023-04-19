@@ -1,13 +1,5 @@
-import React, { ReactNode, createContext, useContext, useState } from "react";
-
-interface BudgetContextState {
-  badget: number;
-  addBadget: (badget: number) => void;
-}
-
-interface BadgetContextProviderProps {
-  children: ReactNode;
-}
+import React, { createContext, useContext, useState } from "react";
+import { BudgetContextState, ChildrenContextProvider } from "types";
 
 const BadgetContext = createContext<BudgetContextState>({} as BudgetContextState);
 
@@ -29,6 +21,6 @@ const useBadgetValue = () => {
 
 export const useBadgetContext = () => useContext(BadgetContext);
 
-export const BadgetContextProvider = ({ children }: BadgetContextProviderProps) => {
+export const BadgetContextProvider = ({ children }: ChildrenContextProvider) => {
   return <BadgetContext.Provider value={useBadgetValue()}>{children}</BadgetContext.Provider>;
 };

@@ -1,16 +1,5 @@
-
-import React, { ReactNode, createContext, useContext, useState } from "react";
-import { Expense } from "types";
-
-interface ExpensesContextState {
-  expenses: Expense[];
-  deleteExpense: (expense: string) => void;
-  addExpense: (expense: Expense) => void;
-}
-
-interface ExpensesContextProviderProps {
-  children: ReactNode;
-}
+import React, { createContext, useContext, useState } from "react";
+import { ChildrenContextProvider, Expense, ExpensesContextState } from "types";
 
 const ExpenseContext = createContext<ExpensesContextState>({} as ExpensesContextState);
 
@@ -38,6 +27,6 @@ const useExpensesValue = () => {
 
 export const useExpensesContext = () => useContext(ExpenseContext);
 
-export const ExpensesContextProvider = ({ children }: ExpensesContextProviderProps) => {
+export const ExpensesContextProvider = ({ children }: ChildrenContextProvider) => {
   return <ExpenseContext.Provider value={useExpensesValue()}>{children}</ExpenseContext.Provider>;
 };

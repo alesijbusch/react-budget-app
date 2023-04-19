@@ -1,16 +1,6 @@
-import React, { ReactNode, createContext, useContext, useState } from "react";
-import { CurrencyOption } from "types";
+import React, { createContext, useContext, useState } from "react";
+import { ChildrenContextProvider, CurencyContextState, CurrencyOption } from "types";
 import { Currency } from "config/currency";
-
-interface CurencyContextState {
-  curency: CurrencyOption;
-  curencies: CurrencyOption[];
-  setCurency: (curency: CurrencyOption) => void;
-}
-
-interface CurencyContextProviderProps {
-  children: ReactNode;
-}
 
 const curencies: CurrencyOption[] = [
   { value: Currency.USD, label: "USD" },
@@ -39,6 +29,6 @@ const useCurencyValue = () => {
 
 export const useCurencyContext = () => useContext(CurencyContext);
 
-export const CurencyContextProvider = ({ children }: CurencyContextProviderProps) => {
+export const CurencyContextProvider = ({ children }: ChildrenContextProvider) => {
   return <CurencyContext.Provider value={useCurencyValue()}>{children}</CurencyContext.Provider>;
 };
