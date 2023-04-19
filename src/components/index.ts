@@ -6,7 +6,7 @@ import { Input } from "./Input/Input";
 import { BadgetCard } from "./BadgetCard/BadgetCard";
 import { RemainingCard } from "./RemainingCard/RemainingCard";
 import { SpentCard } from "./SpentCard/SpentCard";
-import { CustomSelect } from "./Select/Select";
+import { CustomSelect } from "./CustomSelect/CustomSelect";
 import { ExpensesList } from "./ExpensesList/ExpensesList";
 import { ExpensesBadget } from "./ExpensesBadget/ExpensesBadget";
 import { ExpensesItem } from "./ExpensesItem/ExpensesItem";

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { BudgetApp, BudgetGroup, StyledBadget } from "./styles";
 import { BadgetCard, CustomSelect, RemainingCard, SpentCard, Title } from "components";
 

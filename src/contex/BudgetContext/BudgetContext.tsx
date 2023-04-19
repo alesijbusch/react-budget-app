@@ -7,7 +7,7 @@ const useBadgetValue = () => {
   const [badgetValue, setBadgetValue] = useState<BudgetContextState>(() => {
     return {
       badget: 0,
-      addBadget: (badget: number) => {
+      setBadget: (badget: number) => {
         setBadgetValue((context) => ({
           ...context,
           badget: +badget,

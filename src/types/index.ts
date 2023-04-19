@@ -30,8 +30,10 @@ interface ExpensesContextState {
 
 interface BudgetContextState {
   badget: number;
-  addBadget: (badget: number) => void;
+  setBadget: (badget: number) => void;
 }
+
+type AppContextProvider = React.FunctionComponent<ChildrenContextProvider>;
 
 export type {
   CurrencyOption,
@@ -40,4 +42,5 @@ export type {
   CurencyContextState,
   ExpensesContextState,
   BudgetContextState,
+  AppContextProvider,
 };

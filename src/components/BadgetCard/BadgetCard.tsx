@@ -18,7 +18,7 @@ interface BadgetCardProps {
 
 export const BadgetCard = () => {
   const { curency } = useCurencyContext();
-  const { badget, addBadget } = useBadgetContext();
+  const { badget, setBadget } = useBadgetContext();
   const [isEditMode, toggleEditMode] = useToggle(true);
 
   const {
@@ -29,7 +29,7 @@ export const BadgetCard = () => {
   } = useForm<BadgetCardProps>();
 
   const onSubmit: SubmitHandler<BadgetCardProps> = (data) => {
-    addBadget(data.budget);
+    setBadget(data.budget);
     reset();
     toggleEditMode();
   };
