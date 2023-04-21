@@ -9,8 +9,8 @@ import {
 } from "./styles";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useBadgetContext, useCurencyContext } from "contex";
-import { getValidateRule } from "getValidateRule/getValidateRule";
 import { useToggle } from "hooks";
+import { getValidateRule } from "getValidateRule";
 
 interface BadgetCardProps {
   budget: number;

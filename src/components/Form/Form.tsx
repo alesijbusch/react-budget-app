@@ -4,8 +4,8 @@ import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { v4 as uuidv4 } from "uuid";
 import { Input, Title } from "components";
 import { useBadgetContext, useExpensesContext } from "contex";
-import { getValidateRule } from "getValidateRule/getValidateRule";
-import { Expense } from "types";
+import { Expense } from "types/types";
+import { getValidateRule } from "getValidateRule";
 
 export const Form = () => {
   const { addExpense } = useExpensesContext();

@@ -1,6 +1,6 @@
 import { StyledExpensesList } from "./styles";
 import { ExpensesItem } from "components";
-import { Expense } from "types";
+import { Expense } from "types/types";
 
 interface ExpensesListProps {
   filtredExpenses: Expense[];

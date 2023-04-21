@@ -1,6 +1,6 @@
-import { Form } from "components/Form/Form";
-import { Badget } from "components/Badget/Badget";
-import { Expenses } from "components/Expenses/Expenses";
+import { Form } from "./Form/Form";
+import { Badget } from "./Badget/Badget";
+import { Expenses } from "./Expenses/Expenses";
 import { Title } from "./Title/Title";
 import { Input } from "./Input/Input";
 import { BadgetCard } from "./BadgetCard/BadgetCard";
