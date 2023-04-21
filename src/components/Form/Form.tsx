@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 import { Input, Title } from "components";
 import { useBadgetContext, useExpensesContext } from "contex";
 import { Expense } from "types/types";
-import { getValidateRule } from "getValidateRule";
+import { getValidateRule } from "utils";
 
 export const Form = () => {
   const { addExpense } = useExpensesContext();

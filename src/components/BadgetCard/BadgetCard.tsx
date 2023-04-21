@@ -10,7 +10,7 @@ import {
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useBadgetContext, useCurencyContext } from "contex";
 import { useToggle } from "hooks";
-import { getValidateRule } from "getValidateRule";
+import { getValidateRule } from "utils";
 
 interface BadgetCardProps {
   budget: number;
