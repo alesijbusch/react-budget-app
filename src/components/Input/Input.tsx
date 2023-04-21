@@ -1,13 +1,8 @@
-import React, { ChangeEvent } from "react";
+import React, { InputHTMLAttributes } from "react";
 import { StyledInput } from "./styles";
 
-interface InputProps {
-  type: string;
-  placeholder: string;
-  value: string;
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-}
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
 
-export const Input = ({ value, onChange, type, placeholder }: InputProps) => {
-  return <StyledInput value={value} onChange={onChange} type={type} placeholder={placeholder} />;
+export const Input = (props: InputProps) => {
+  return <StyledInput {...props} />;
 };
