@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledRemainingCardText, StyledOverspendingText } from "./styles";
+import { StyledRemainingCard, StyledOverspending } from "./styles";
 import { useBudgetContext, useCurrencyContext, useExpensesContext } from "context";
 
 export const RemainingCard = () => {
@@ -12,15 +12,15 @@ export const RemainingCard = () => {
   return (
     <>
       {remaining >= 0 ? (
-        <StyledRemainingCardText>
+        <StyledRemainingCard>
           Remaining: {currency.value}
           {remaining}
-        </StyledRemainingCardText>
+        </StyledRemainingCard>
       ) : (
-        <StyledOverspendingText>
+        <StyledOverspending>
           Overspending by {currency.value}
           {Math.abs(remaining)}
-        </StyledOverspendingText>
+        </StyledOverspending>
       )}
     </>
   );

@@ -1,5 +1,5 @@
 import React, { ChangeEvent } from "react";
-import { InputGroup, StyledButton, StyledError, StyledForm } from "./styles";
+import { InputGroup, ButtonForm, StyledError, StyledForm } from "./styles";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { v4 as uuidv4 } from "uuid";
 import { Input, Title } from "components";
@@ -47,7 +47,7 @@ export const Form = () => {
         />
         {errors.cost?.message && <StyledError>{errors.cost.message}</StyledError>}
       </InputGroup>
-      <StyledButton type="submit">Done</StyledButton>
+      <ButtonForm type="submit">Done</ButtonForm>
     </StyledForm>
   );
 };

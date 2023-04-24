@@ -28,7 +28,7 @@ const StyledInput = styled.input`
     color: #999999;
   }
 `;
-const StyledButton = styled.button`
+const ButtonForm = styled.button`
   padding: 15px;
   font-size: 16px;
   font-style: normal;
@@ -45,4 +45,4 @@ const StyledError = styled.span`
   color: red;
 `;
 
-export { StyledForm, StyledInput, InputGroup, StyledButton, StyledError };
+export { StyledForm, StyledInput, InputGroup, ButtonForm, StyledError };

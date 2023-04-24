@@ -1,11 +1,11 @@
 import React from "react";
 import {
   StyledBudgetCard,
-  StyledBudgetCardInput,
-  StyledBudgetCardButton,
-  StyledBudgetCardForm,
-  StyledBudgetCardText,
-  StyledBudgetCardError,
+  BudgetCardInput,
+  BudgetCardButton,
+  BudgetCardForm,
+  BudgetCardText,
+  BudgetCardError,
 } from "./styles";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useBudgetContext, useCurrencyContext } from "context";
@@ -38,28 +38,24 @@ export const BudgetCard = () => {
     <>
       {isEditMode ? (
         <StyledBudgetCard>
-          <StyledBudgetCardText>
+          <BudgetCardText>
             Budget: {currency.value}
             {budget}
-          </StyledBudgetCardText>
-          <StyledBudgetCardButton type="button" onClick={toggleEditMode}>
+          </BudgetCardText>
+          <BudgetCardButton type="button" onClick={toggleEditMode}>
             Edit
-          </StyledBudgetCardButton>
+          </BudgetCardButton>
         </StyledBudgetCard>
       ) : (
-        <StyledBudgetCardForm onSubmit={handleSubmit(onSubmit)}>
-          <StyledBudgetCard>
-            <StyledBudgetCardInput
-              {...register("budget", getValidateRule("budget"))}
-              type="text"
-              placeholder="Enter  budget ..."
-            />
-            <StyledBudgetCardButton>Save</StyledBudgetCardButton>
-            {errors.budget?.message && (
-              <StyledBudgetCardError>{errors.budget.message}</StyledBudgetCardError>
-            )}
-          </StyledBudgetCard>
-        </StyledBudgetCardForm>
+        <BudgetCardForm onSubmit={handleSubmit(onSubmit)}>
+          <BudgetCardInput
+            {...register("budget", getValidateRule("budget"))}
+            type="text"
+            placeholder="Enter  budget ..."
+          />
+          <BudgetCardButton>Save</BudgetCardButton>
+          {errors.budget?.message && <BudgetCardError>{errors.budget.message}</BudgetCardError>}
+        </BudgetCardForm>
       )}
     </>
   );

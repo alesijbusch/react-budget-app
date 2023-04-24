@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledExpensesClose, StyledExpensesItem, StyledExpensesTitle } from "./styles";
+import { ExpensesClose, StyledExpensesItem, ExpensesTitle } from "./styles";
 import { ExpensesBadget } from "components";
 import { useCurrencyContext, useExpensesContext } from "context";
 import { Expense } from "types";
@@ -15,11 +15,11 @@ export const ExpensesItem = ({ expense: { name, cost, id } }: ExpenseItemProps) 
 
   return (
     <StyledExpensesItem>
-      <StyledExpensesTitle>{name}</StyledExpensesTitle>
+      <ExpensesTitle>{name}</ExpensesTitle>
       <ExpensesBadget currency={currency.value} sum={cost}></ExpensesBadget>
-      <StyledExpensesClose onClick={() => deleteExpense(id)}>
+      <ExpensesClose onClick={() => deleteExpense(id)}>
         <CloseImg />
-      </StyledExpensesClose>
+      </ExpensesClose>
     </StyledExpensesItem>
   );
 };

@@ -1,19 +1,19 @@
 import React from "react";
-import { BudgetApp, BudgetGroup, StyledBudget } from "./styles";
+import { BudgetHeader, StyledBudget, BudgetBody } from "./styles";
 import { BudgetCard, CustomSelect, RemainingCard, SpentCard, Title } from "components";
 
 export const Budget = () => {
   return (
-    <BudgetGroup>
-      <BudgetApp>
+    <StyledBudget>
+      <BudgetHeader>
         <Title name="Budget App" />
         <CustomSelect />
-      </BudgetApp>
-      <StyledBudget>
+      </BudgetHeader>
+      <BudgetBody>
         <BudgetCard />
         <RemainingCard />
         <SpentCard />
-      </StyledBudget>
-    </BudgetGroup>
+      </BudgetBody>
+    </StyledBudget>
   );
 };

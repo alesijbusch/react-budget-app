@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 const StyledBudgetCard = styled.div`
   display: grid;
   grid-template-columns: auto 85px;
@@ -8,7 +7,7 @@ const StyledBudgetCard = styled.div`
   background: #7cc6fe;
   border-radius: 10px;
 `;
-const StyledBudgetCardInput = styled.input`
+const BudgetCardInput = styled.input`
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -18,6 +17,7 @@ const StyledBudgetCardInput = styled.input`
   outline: 0;
   background: #7cc6fe;
   color: #000;
+  width: 100%;
   ::placeholder {
     font-family: "Inter", sans-serif;
     font-size: 20px;
@@ -28,7 +28,7 @@ const StyledBudgetCardInput = styled.input`
     color: rgba(255, 255, 255, 0.6);
   }
 `;
-const StyledBudgetCardButton = styled.button`
+const BudgetCardButton = styled.button`
   padding: 10px 30px;
   font-family: "Inter", sans-serif;
   font-size: 14px;
@@ -41,7 +41,7 @@ const StyledBudgetCardButton = styled.button`
   outline: 0;
   cursor: pointer;
 `;
-const StyledBudgetCardText = styled.p`
+const BudgetCardText = styled.p`
   margin-right: 15px;
   font-size: 20px;
   font-style: normal;
@@ -50,8 +50,15 @@ const StyledBudgetCardText = styled.p`
   background: #7cc6fe;
   color: #000;
 `;
-const StyledBudgetCardForm = styled.form``;
-const StyledBudgetCardError = styled.p`
+const BudgetCardForm = styled.form`
+  display: grid;
+  grid-template-columns: auto 85px;
+  align-items: center;
+  padding: 32px 20px;
+  background: #7cc6fe;
+  border-radius: 10px;
+`;
+const BudgetCardError = styled.p`
   width: 100%;
   font-size: 13px;
   color: red;
@@ -59,9 +66,9 @@ const StyledBudgetCardError = styled.p`
 
 export {
   StyledBudgetCard,
-  StyledBudgetCardInput,
-  StyledBudgetCardButton,
-  StyledBudgetCardForm,
-  StyledBudgetCardText,
-  StyledBudgetCardError,
+  BudgetCardInput,
+  BudgetCardButton,
+  BudgetCardForm,
+  BudgetCardText,
+  BudgetCardError,
 };

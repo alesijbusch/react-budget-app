@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledSpentCardText } from "./styles";
+import { StyledSpentCard } from "./styles";
 import { useCurrencyContext, useExpensesContext } from "context";
 
 export const SpentCard = () => {
@@ -9,9 +9,9 @@ export const SpentCard = () => {
   const spent = expenses.reduce((spent, expense) => spent + +expense.cost, 0);
 
   return (
-    <StyledSpentCardText>
+    <StyledSpentCard>
       Spent so far: {currency.value}
       {spent}
-    </StyledSpentCardText>
+    </StyledSpentCard>
   );
 };

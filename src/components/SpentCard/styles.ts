@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledSpentCardText = styled.p`
+const StyledSpentCard = styled.p`
   padding: 36px 20px 40px;
   font-size: 20px;
   font-style: normal;
@@ -9,4 +9,4 @@ const StyledSpentCardText = styled.p`
   background: #e7bbe3;
   border-radius: 10px;
 `;
-export { StyledSpentCardText };
+export { StyledSpentCard };

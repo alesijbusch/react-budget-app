@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useState } from "react";
-import { ExpensesGroup, ExpensesNotFound } from "./styles";
+import { StyledExpenses, ExpensesNotFound } from "./styles";
 import { ExpensesList, Input, Title } from "components";
 import { useExpensesContext } from "context";
 import { useDebounce } from "hooks";
@@ -17,7 +17,7 @@ export const Expenses = () => {
   });
 
   return (
-    <ExpensesGroup>
+    <StyledExpenses>
       <Title name="Expenses" />
       <Input value={search} onChange={handelSearch} type="search" placeholder="search ..." />
       {filtredExpenses.length === 0 ? (
@@ -25,6 +25,6 @@ export const Expenses = () => {
       ) : (
         <ExpensesList filtredExpenses={filtredExpenses} />
       )}
-    </ExpensesGroup>
+    </StyledExpenses>
   );
 };
