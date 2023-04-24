@@ -28,8 +28,8 @@ export const BudgetCard = () => {
     formState: { errors },
   } = useForm<BudgetCardProps>();
 
-  const onSubmit: SubmitHandler<BudgetCardProps> = (data) => {
-    setBudget(data.budget);
+  const onSubmit: SubmitHandler<BudgetCardProps> = ({ budget }) => {
+    setBudget(budget);
     reset();
     toggleEditMode();
   };

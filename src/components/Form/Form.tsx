@@ -32,14 +32,7 @@ export const Form = () => {
         <Controller
           control={control}
           rules={getValidateRule("text")}
-          render={({ field: { onChange, value } }) => (
-            <Input
-              value={value}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => onChange(e)}
-              placeholder="enter name ..."
-              type="text"
-            />
-          )}
+          render={({ field }) => <Input {...field} placeholder="enter name ..." type="text" />}
           name="name"
           defaultValue=""
         />
@@ -48,14 +41,7 @@ export const Form = () => {
         <Controller
           control={control}
           rules={getValidateRule("number")}
-          render={({ field }) => (
-            <Input
-              value={field.value}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => field.onChange(e)}
-              placeholder="enter cost ..."
-              type="text"
-            />
-          )}
+          render={({ field }) => <Input {...field} placeholder="enter cost ..." type="text" />}
           name="cost"
           defaultValue=""
         />

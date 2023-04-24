@@ -2,7 +2,7 @@ import React from "react";
 import { Budget, Expenses, Form } from "components";
 import { Container } from "ui";
 
-function App() {
+const App = () => {
   return (
     <Container>
       <Budget />
@@ -10,6 +10,6 @@ function App() {
       <Form />
     </Container>
   );
-}
+};
 
 export default App;
