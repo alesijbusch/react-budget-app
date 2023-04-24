@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState } from "react";
 import { Currency } from "config";
-import { ChildrenContextProvider, CurrencyContextState, CurrencyOption } from "types";
+import { ChildrenContextProvider, CurrencyOption } from "types";
+import { CurrencyContextState } from "./types";
 
 const currencies: CurrencyOption[] = [
   { value: Currency.USD, label: "USD" },

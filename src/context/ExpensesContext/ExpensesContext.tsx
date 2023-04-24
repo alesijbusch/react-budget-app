@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState } from "react";
-import { ChildrenContextProvider, Expense, ExpensesContextState } from "types";
+import { ChildrenContextProvider, Expense } from "types";
+import { ExpensesContextState } from "./types";
 
 const ExpenseContext = createContext<ExpensesContextState>({} as ExpensesContextState);
 

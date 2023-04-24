@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState } from "react";
-import { BudgetContextState, ChildrenContextProvider } from "types";
+import { ChildrenContextProvider } from "types";
+import { BudgetContextState } from "./types";
 
 const BudgetContext = createContext<BudgetContextState>({} as BudgetContextState);
 

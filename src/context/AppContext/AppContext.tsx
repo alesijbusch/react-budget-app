@@ -1,5 +1,6 @@
 import React from "react";
-import { AppContextProvider, ChildrenContextProvider } from "types";
+import { ChildrenContextProvider } from "types";
+import { AppContextProvider } from "./types";
 
 export const AppContext = (providers: AppContextProvider[]) => {
   return providers.reduce(
