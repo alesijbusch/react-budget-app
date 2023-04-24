@@ -1,9 +1,9 @@
 import { Form } from "./Form/Form";
-import { Badget } from "./Badget/Badget";
+import { Budget } from "./Budget/Budget";
 import { Expenses } from "./Expenses/Expenses";
 import { Title } from "./Title/Title";
 import { Input } from "./Input/Input";
-import { BadgetCard } from "./BadgetCard/BadgetCard";
+import { BudgetCard } from "./BudgetCard/BudgetCard";
 import { RemainingCard } from "./RemainingCard/RemainingCard";
 import { SpentCard } from "./SpentCard/SpentCard";
 import { CustomSelect } from "./CustomSelect/CustomSelect";
@@ -13,11 +13,11 @@ import { ExpensesItem } from "./ExpensesItem/ExpensesItem";
 
 export {
   Form,
-  Badget,
+  Budget,
   Expenses,
   Title,
   Input,
-  BadgetCard,
+  BudgetCard,
   RemainingCard,
   SpentCard,
   CustomSelect,

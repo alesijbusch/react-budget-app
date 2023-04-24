@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledExpensesClose, StyledExpensesItem, StyledExpensesTitle } from "./styles";
 import { ExpensesBadget } from "components";
-import { useCurencyContext, useExpensesContext } from "contex";
+import { useCurrencyContext, useExpensesContext } from "context";
 import { Expense } from "types";
 import { CloseImg } from "assets";
 
@@ -10,13 +10,13 @@ interface ExpenseItemProps {
 }
 
 export const ExpensesItem = ({ expense: { name, cost, id } }: ExpenseItemProps) => {
-  const { curency } = useCurencyContext();
+  const { currency } = useCurrencyContext();
   const { deleteExpense } = useExpensesContext();
 
   return (
     <StyledExpensesItem>
       <StyledExpensesTitle>{name}</StyledExpensesTitle>
-      <ExpensesBadget curency={curency.value} sum={cost}></ExpensesBadget>
+      <ExpensesBadget currency={currency.value} sum={cost}></ExpensesBadget>
       <StyledExpensesClose onClick={() => deleteExpense(id)}>
         <CloseImg />
       </StyledExpensesClose>

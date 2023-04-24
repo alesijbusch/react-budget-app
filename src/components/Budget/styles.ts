@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledBadget = styled.div`
+const StyledBudget = styled.div`
   display: grid;
   grid-gap: 20px;
 `;
@@ -15,4 +15,4 @@ const BudgetGroup = styled.div`
   grid-gap: 20px;
 `;
 
-export { StyledBadget, BudgetApp, BudgetGroup };
+export { StyledBudget, BudgetApp, BudgetGroup };

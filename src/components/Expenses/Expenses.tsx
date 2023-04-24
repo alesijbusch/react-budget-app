@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useState } from "react";
 import { ExpensesGroup, ExpensesNotFound } from "./styles";
 import { ExpensesList, Input, Title } from "components";
-import { useExpensesContext } from "contex";
+import { useExpensesContext } from "context";
 import { useDebounce } from "hooks";
 
 export const Expenses = () => {

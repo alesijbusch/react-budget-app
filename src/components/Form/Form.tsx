@@ -3,13 +3,13 @@ import { InputGroup, StyledButton, StyledError, StyledForm } from "./styles";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { v4 as uuidv4 } from "uuid";
 import { Input, Title } from "components";
-import { useBadgetContext, useExpensesContext } from "contex";
-import { Expense } from "types/types";
+import { useBudgetContext, useExpensesContext } from "context";
+import { Expense } from "types";
 import { getValidateRule } from "utils";
 
 export const Form = () => {
   const { addExpense } = useExpensesContext();
-  const { badget } = useBadgetContext();
+  const { budget } = useBudgetContext();
 
   const {
     handleSubmit,
@@ -18,14 +18,11 @@ export const Form = () => {
     formState: { errors },
   } = useForm<Expense>({});
 
-  const onSubmit: SubmitHandler<Expense> = (data) => {
-    if (badget > 0) {
-      addExpense({ ...data, id: uuidv4() });
-    } else {
-      alert("Enter budget");
+  const onSubmit: SubmitHandler<Expense> = (expense) => {
+    if (budget > 0) {
+      addExpense({ ...expense, id: uuidv4() });
+      reset();
     }
-
-    reset();
   };
 
   return (

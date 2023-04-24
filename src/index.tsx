@@ -5,14 +5,14 @@ import App from "./App";
 import { GlobalStyles } from "ui";
 import {
   BadgetContextProvider,
-  CurencyContextProvider,
+  CurrencyContextProvider,
   ExpensesContextProvider,
   AppContext,
-} from "contex";
+} from "context";
 
 const Provider = AppContext([
   BadgetContextProvider,
-  CurencyContextProvider,
+  CurrencyContextProvider,
   ExpensesContextProvider,
 ]);
 

@@ -3,13 +3,13 @@ import { StyledExpensesBadget } from "./styles";
 
 interface ExpensesBadgetProps {
   sum: string;
-  curency: string;
+  currency: string;
 }
 
-export const ExpensesBadget = ({ sum, curency }: ExpensesBadgetProps) => {
+export const ExpensesBadget = ({ sum, currency }: ExpensesBadgetProps) => {
   return (
     <StyledExpensesBadget>
-      {curency}
+      {currency}
       {sum}
     </StyledExpensesBadget>
   );

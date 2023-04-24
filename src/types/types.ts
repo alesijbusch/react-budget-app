@@ -16,10 +16,10 @@ interface ChildrenContextProvider {
   children: ReactNode;
 }
 
-interface CurencyContextState {
-  curency: CurrencyOption;
-  curencies: CurrencyOption[];
-  setCurency: (curency: CurrencyOption) => void;
+interface CurrencyContextState {
+  currency: CurrencyOption;
+  currencies: CurrencyOption[];
+  setCurrency: (curency: CurrencyOption) => void;
 }
 
 interface ExpensesContextState {
@@ -29,8 +29,8 @@ interface ExpensesContextState {
 }
 
 interface BudgetContextState {
-  badget: number;
-  setBadget: (badget: number) => void;
+  budget: number;
+  setBudget: (badget: number) => void;
 }
 
 type AppContextProvider = React.FunctionComponent<ChildrenContextProvider>;
@@ -39,7 +39,7 @@ export type {
   CurrencyOption,
   Expense,
   ChildrenContextProvider,
-  CurencyContextState,
+  CurrencyContextState,
   ExpensesContextState,
   BudgetContextState,
   AppContextProvider,

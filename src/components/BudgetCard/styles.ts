@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledBadgetCard = styled.div`
+const StyledBudgetCard = styled.div`
   display: grid;
   grid-template-columns: auto 85px;
   align-items: center;
@@ -8,7 +8,7 @@ const StyledBadgetCard = styled.div`
   background: #7cc6fe;
   border-radius: 10px;
 `;
-const StyledBadgetCardInput = styled.input`
+const StyledBudgetCardInput = styled.input`
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -28,7 +28,7 @@ const StyledBadgetCardInput = styled.input`
     color: rgba(255, 255, 255, 0.6);
   }
 `;
-const StyledBadgetCardButton = styled.button`
+const StyledBudgetCardButton = styled.button`
   padding: 10px 30px;
   font-family: "Inter", sans-serif;
   font-size: 14px;
@@ -41,7 +41,7 @@ const StyledBadgetCardButton = styled.button`
   outline: 0;
   cursor: pointer;
 `;
-const StyledBadgetCardText = styled.p`
+const StyledBudgetCardText = styled.p`
   margin-right: 15px;
   font-size: 20px;
   font-style: normal;
@@ -50,18 +50,18 @@ const StyledBadgetCardText = styled.p`
   background: #7cc6fe;
   color: #000;
 `;
-const StyledBadgetCardForm = styled.form``;
-const StyledBadgetCardError = styled.p`
+const StyledBudgetCardForm = styled.form``;
+const StyledBudgetCardError = styled.p`
   width: 100%;
   font-size: 13px;
   color: red;
 `;
 
 export {
-  StyledBadgetCard,
-  StyledBadgetCardInput,
-  StyledBadgetCardButton,
-  StyledBadgetCardForm,
-  StyledBadgetCardText,
-  StyledBadgetCardError,
+  StyledBudgetCard,
+  StyledBudgetCardInput,
+  StyledBudgetCardButton,
+  StyledBudgetCardForm,
+  StyledBudgetCardText,
+  StyledBudgetCardError,
 };

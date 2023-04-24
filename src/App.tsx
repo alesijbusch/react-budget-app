@@ -1,11 +1,11 @@
 import React from "react";
-import { Badget, Expenses, Form } from "components";
+import { Budget, Expenses, Form } from "components";
 import { Container } from "ui";
 
 function App() {
   return (
     <Container>
-      <Badget />
+      <Budget />
       <Expenses />
       <Form />
     </Container>
